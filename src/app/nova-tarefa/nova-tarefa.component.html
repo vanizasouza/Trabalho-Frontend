@@ -1,0 +1,52 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="form-card">
+  <!-- Campo Nome -->
+  <mat-form-field appearance="outline" class="campo-completo">
+    <mat-label>TITULO</mat-label>
+    <input matInput formControlName="name" required maxlength="100" minlength="1">
+    <mat-error *ngIf="taskForm.get('name')?.invalid && taskForm.get('name')?.touched">
+      Nome é obrigatório (1-100 caracteres).
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Campo Descrição -->
+  <mat-form-field appearance="outline" class="campo-completo">
+    <mat-label>DESCRIÇÃO</mat-label>
+    <textarea matInput formControlName="description" required minlength="1"></textarea>
+    <mat-error *ngIf="taskForm.get('description')?.invalid && taskForm.get('description')?.touched">
+      Descrição é obrigatória.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Campo Horas Planejadas -->
+  <mat-form-field appearance="outline" class="campo-completo">
+    <mat-label>HORAS PLANEJADAS</mat-label>
+    <input matInput type="number" formControlName="planned_hours" required>
+    <mat-error *ngIf="taskForm.get('planned_hours')?.invalid && taskForm.get('planned_hours')?.touched">
+      Horas planejadas devem ser um número.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Campo Status -->
+  <mat-form-field appearance="outline" class="campo-completo">
+    <mat-label>STATUS</mat-label>
+    <mat-select formControlName="status">
+      <mat-option *ngFor="let s of opcoesStatus" [value]="s.value">
+        {{ s.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Campo Responsável -->
+  <mat-form-field appearance="outline" class="campo-completo">
+    <mat-label>RESPONSÁVEL PELA TAREFA</mat-label>
+    <input matInput type="number" formControlName="owner" required>
+    <mat-error *ngIf="taskForm.get('owner')?.invalid && taskForm.get('owner')?.touched">
+      ID do responsável é obrigatório.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Botão Salvar -->
+  <button mat-raised-button color="primary" type="submit" [disabled]="taskForm.invalid" class="btn-salvar">
+    Salvar
+  </button>
+</form>

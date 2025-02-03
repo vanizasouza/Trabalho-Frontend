@@ -1,0 +1,61 @@
+/* Container principal da tela de cadastro */
+.tela-cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+
+/* Card de cadastro */
+.card-cadastro {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho do card */
+.cabecalho-card {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Título do card */
+.titulo-card {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Conteúdo do card */
+.conteudo-card {
+  padding: 10px;
+}
+
+/* Formulário de cadastro */
+.form-cadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Cada campo do formulário */
+.campo-todo {
+  width: 100%;
+}
+
+/* Dicas de preenchimento */
+mat-hint {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* Botão de cadastro */
+.botao-cadastro {
+  margin-top: 15px;
+  width: 100%;
+}

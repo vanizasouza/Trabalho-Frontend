@@ -1,0 +1,54 @@
+<div class="tela-cadastro"> <!-- Cria uma área para a tela de cadastro -->
+    <div class="card-cadastro"> <!-- Cria o cartão onde o formulário de cadastro será exibido -->
+        <div class="cabecalho-card"> <!-- Cabeçalho do cartão -->
+            <h3 class="titulo-card">Criar Conta</h3> <!-- Título "Criar Conta" -->
+        </div>
+
+        <div class="conteudo-card"> <!-- Corpo do cartão onde o formulário de cadastro será exibido -->
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-cadastro"> <!-- Formulário de cadastro, que ao ser enviado chama a função onSubmit -->
+
+                <!-- Campo Username -->
+                <mat-form-field appearance="fill" class="campo-todo"> <!-- Campo de nome de usuário -->
+                    <mat-label>Username</mat-label> <!-- Rótulo "Username" -->
+                    <input matInput formControlName="username" required> <!-- Campo de input para o nome de usuário -->
+                    <mat-error *ngIf="username?.hasError('required')">Obrigatório</mat-error> <!-- Mensagem de erro se o campo for obrigatório e não preenchido -->
+                    <mat-error *ngIf="username?.hasError('pattern')">Caracteres inválidos</mat-error> <!-- Mensagem de erro se o nome de usuário tiver caracteres inválidos -->
+                </mat-form-field>
+
+                <!-- Campo Email -->
+                <mat-form-field appearance="fill" class="campo-todo"> <!-- Campo de email -->
+                    <mat-label>Email</mat-label> <!-- Rótulo "Email" -->
+                    <input matInput formControlName="email"> <!-- Campo de input para o email -->
+                    <mat-error>Formato de email inválido</mat-error> <!-- Mensagem de erro se o email for inválido -->
+                </mat-form-field>
+
+                <!-- Campo Senha -->
+                <mat-form-field appearance="fill" class="campo-todo"> <!-- Campo de senha -->
+                    <mat-label>Senha</mat-label> <!-- Rótulo "Senha" -->
+                    <input matInput type="password" formControlName="password" required> <!-- Campo de senha (oculta ao ser digitada) -->
+                    <mat-hint>Entre 1 e 128 caracteres</mat-hint> <!-- Dica de comprimento de senha -->
+                    <mat-error>Senha obrigatória</mat-error> <!-- Mensagem de erro se a senha não for preenchida -->
+                </mat-form-field>
+
+                <!-- Campo Nome -->
+                <mat-form-field appearance="fill" class="campo-todo"> <!-- Campo para o nome -->
+                    <mat-label>Nome</mat-label> <!-- Rótulo "Nome" -->
+                    <input matInput formControlName="first_name"> <!-- Campo de input para o nome -->
+                    <mat-error>Máximo 150 caracteres</mat-error> <!-- Mensagem de erro se o nome for muito longo -->
+                </mat-form-field>
+
+                <!-- Campo Sobrenome -->
+                <mat-form-field appearance="fill" class="campo-todo"> <!-- Campo para o sobrenome -->
+                    <mat-label>Sobrenome</mat-label> <!-- Rótulo "Sobrenome" -->
+                    <input matInput formControlName="last_name"> <!-- Campo de input para o sobrenome -->
+                    <mat-error>Máximo 150 caracteres</mat-error> <!-- Mensagem de erro se o sobrenome for muito longo -->
+                </mat-form-field>
+
+                <!-- Botão de Cadastro -->
+                <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid" class="botao-cadastro">
+                    Cadastrar
+                </button> <!-- Botão de cadastro, desabilitado se o formulário for inválido -->
+            </form>
+        </div>
+    </div>
+</div>

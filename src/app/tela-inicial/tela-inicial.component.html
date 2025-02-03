@@ -1,0 +1,36 @@
+<div class="quadro">
+  <div class="colunas">
+
+    <!-- Coluna A FAZER -->
+    <mat-card class="coluna">
+      <h2 class="titulo-coluna">A FAZER</h2> <!-- Título da coluna -->
+      <div class="lista-tarefas">
+        <!-- Itera sobre as tarefas que estão a fazer e renderiza um app-card para cada tarefa -->
+        <app-card *ngFor="let tarefa of tarefasAFazer" [task]="tarefa"></app-card>
+      </div>
+    </mat-card>
+
+    <!-- Coluna EM ANDAMENTO -->
+    <mat-card class="coluna">
+      <h2 class="titulo-coluna">EM ANDAMENTO</h2> <!-- Título da coluna -->
+      <div class="lista-tarefas">
+        <!-- Itera sobre as tarefas em andamento e renderiza um app-card para cada uma -->
+        <app-card *ngFor="let tarefa of tarefasEmProgresso" [task]="tarefa"></app-card>
+      </div>
+      <div class="area-botao">
+        <!-- Botão para criar uma nova tarefa, com link para a página de criação -->
+        <button mat-raised-button color="accent" routerLink="/criar-task">Novo cartão</button>
+      </div>
+    </mat-card>
+
+    <!-- Coluna CONCLUÍDO -->
+    <mat-card class="coluna">
+      <h2 class="titulo-coluna">CONCLUÍDO</h2> <!-- Título da coluna -->
+      <div class="lista-tarefas">
+        <!-- Itera sobre as tarefas concluídas e renderiza um app-card para cada uma -->
+        <app-card *ngFor="let tarefa of tarefasConcluidas" [task]="tarefa"></app-card>
+      </div>
+    </mat-card>
+
+  </div>
+</div>

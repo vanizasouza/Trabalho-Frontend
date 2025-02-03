@@ -1,0 +1,27 @@
+<mat-card class="task-card"> <!-- Cria o cartão de tarefa que vai ser exibido na tela -->
+    <mat-card-header class="task-header"> <!-- Cabeçalho do cartão -->
+        <mat-card-title class="task-title">{{ task.name }}</mat-card-title> <!-- Exibe o nome da tarefa -->
+        <mat-card-subtitle class="task-subtitle">Status: {{ getValoresTipoStatus(task.status) }}</mat-card-subtitle> <!-- Exibe o status da tarefa, usando a função getValoresTipoStatus para transformar o número em um texto -->
+    </mat-card-header>
+
+    <mat-card-content class="task-content"> <!-- Corpo do cartão onde as informações da tarefa são exibidas -->
+        <p class="task-description">{{ task.description }}</p> <!-- Descrição da tarefa -->
+        <mat-divider class="task-divider"></mat-divider> <!-- Linha de separação visual -->
+
+        <div class="task-info"> <!-- Exibe as informações adicionais da tarefa -->
+            <div class="info-item"> <!-- Primeira informação: horas planejadas -->
+                <mat-icon class="info-icon">access_time</mat-icon> <!-- Ícone de relógio -->
+                <span class="info-text">{{ task.planned_hours }}h</span> <!-- Exibe as horas planejadas para a tarefa -->
+            </div>
+
+            <div class="info-item"> <!-- Segunda informação: ID do responsável -->
+                <mat-icon class="info-icon">assignment_ind</mat-icon> <!-- Ícone de usuário -->
+                <span class="info-text">ID do Responsável: {{ task.owner }}</span> <!-- Exibe o ID do responsável pela tarefa -->
+            </div>
+        </div>
+    </mat-card-content>
+
+    <mat-card-actions class="task-actions"> <!-- Área de ações do cartão -->
+        <button mat-button class="action-button edit-button" (click)="editarTask()">Editar</button> <!-- Botão para editar a tarefa, chama a função editarTask ao ser clicado -->
+    </mat-card-actions>
+</mat-card>

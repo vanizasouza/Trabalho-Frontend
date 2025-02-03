@@ -1,0 +1,37 @@
+/* Formulário */
+.form-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.campo-completo {
+  width: 100%;
+}
+
+/* Botão */
+.btn-salvar {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+/* Estilização das mensagens de erro */
+.mat-error {
+  font-size: 12px;
+  color: red;
+}
+
+/* Ajuste no input para quando houver erro */
+.mat-input-element.ng-invalid.ng-touched {
+  border-color: red;
+}

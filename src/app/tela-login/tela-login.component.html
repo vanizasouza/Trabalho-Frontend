@@ -1,0 +1,41 @@
+<div class="tela-login">
+  <h2 class="titulo-login">Entrar no Sistema</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="formulario">
+    <!-- Campo de Email -->
+    <mat-form-field appearance="outline" class="campo-completo">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="email">
+      <mat-error *ngIf="email?.invalid">
+        <span *ngIf="email?.errors?.['required']">Campo obrigatório</span>
+        <span *ngIf="email?.errors?.['email']">Email inválido</span>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Campo de Senha -->
+    <mat-form-field appearance="outline" class="campo-completo">
+      <mat-label>Senha</mat-label>
+      <input matInput formControlName="password" type="password">
+      <mat-error *ngIf="password?.invalid">Campo obrigatório</mat-error>
+    </mat-form-field>
+
+    <!-- Link para Cadastro -->
+    <div class="link-cadastro">
+      Ainda não tem conta? <a routerLink="/cadastrar" class="link">Cadastre-se</a>
+    </div>
+
+    <!-- Mensagem de erro -->
+    <div *ngIf="mensagemDeErro" class="msg-erro">
+      {{ mensagemDeErro }}
+    </div>
+
+    <!-- Botão de Login -->
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      class="btn-entrar">
+      <span>Entrar</span>
+    </button>
+  </form>
+</div>

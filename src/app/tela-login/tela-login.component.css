@@ -1,0 +1,57 @@
+/* Container principal */
+.tela-login {
+  background: #f0f0f0;
+  max-width: 350px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título da tela de login */
+.titulo-login {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Formulário */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Campo de entrada completo */
+.campo-completo {
+  width: 100%;
+}
+
+/* Área do link para cadastro */
+.link-cadastro {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Estilo para o link de cadastro */
+.link-cadastro .link {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+/* Mensagem de erro */
+.msg-erro {
+  background: #ffdddd;
+  color: #a00;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Botão de login */
+.btn-entrar {
+  margin-top: 10px;
+}

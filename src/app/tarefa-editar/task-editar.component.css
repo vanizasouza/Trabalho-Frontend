@@ -1,0 +1,122 @@
+/* Estilo básico do formulário */
+h2{
+  width: 100%;
+  background-color: #fff;
+}
+.campo-largura-total {
+  width: 100%;
+  background-color: #fff;
+}
+
+/* Botão de salvar */
+.btn-salvar {
+  width: 100%;
+  padding: 10px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-salvar:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Seção de Comentários */
+.secao-comentarios {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+/* Comentário Individual */
+.comentario {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Cabeçalho do Comentário */
+.cabecalho-comentario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.autor {
+  font-weight: bold;
+  color: #333;
+}
+
+.data {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Texto do Comentário */
+.texto-comentario {
+  margin: 0;
+  color: #444;
+}
+
+/* Ações de Edição */
+.acoes-edicao {
+  display: flex;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+
+.acoes-edicao button {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.acoes-edicao button:hover {
+  background-color: #eee;
+}
+
+/* Novo Comentário */
+.novo-comentario {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.novo-comentario textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.novo-comentario button {
+  margin-top: 0.5rem;
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.novo-comentario button:hover {
+  background-color: #45a049;
+}

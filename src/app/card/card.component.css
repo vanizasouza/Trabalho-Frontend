@@ -1,0 +1,9 @@
+/* Estilo do card principal */
+.task-card {
+  background-color: pink;
+  border-radius: 8px;
+  margin: 48px;
+  padding: 48px;
+}
+
+
